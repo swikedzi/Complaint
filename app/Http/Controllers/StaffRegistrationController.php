@@ -14,7 +14,7 @@ class StaffRegistrationController extends Controller
      */
     public function index()
     {
-        //
+        return view('staff.index');
     }
 
     /**
@@ -22,9 +22,11 @@ class StaffRegistrationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function add(Request $request)
     {
-        //
+        if ($request->method() == 'GET') {
+            return view('staff.add');
+        }
     }
 
     /**

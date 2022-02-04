@@ -14,7 +14,7 @@ class ComplainCategoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('category.index');
     }
 
     /**
@@ -22,9 +22,11 @@ class ComplainCategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function add(Request $request)
     {
-        //
+        if ($request->method() == 'GET') {
+            return view('category.add');
+        }
     }
 
     /**

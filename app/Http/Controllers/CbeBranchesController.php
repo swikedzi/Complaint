@@ -14,7 +14,7 @@ class CbeBranchesController extends Controller
      */
     public function index()
     {
-        //
+        return view('branch.index');
     }
 
     /**
@@ -22,9 +22,12 @@ class CbeBranchesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+   public function add(Request $request)
     {
-        //
+        if ($request->method() == 'GET') {
+            return view('branch.add');
+        }
+
     }
 
     /**

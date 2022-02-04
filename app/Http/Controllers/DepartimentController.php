@@ -14,7 +14,14 @@ class DepartimentController extends Controller
      */
     public function index()
     {
-        //
+        return view('departiment.index');
+    }
+
+
+    public function add(Request $request){
+        if ($request->method() == 'GET') {
+            return view('departiment.add');
+        }
     }
 
     /**
